@@ -1,13 +1,9 @@
 import json
-
-from django import forms
 from django.http import (
     HttpResponse,
-    HttpResponseBadRequest,
-    HttpResponseNotFound,
     JsonResponse,
 )
-from django.shortcuts import get_list_or_404, get_object_or_404, render
+from django.shortcuts import get_object_or_404
 from django.utils.decorators import method_decorator
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
@@ -19,7 +15,6 @@ from myapp.models.person import Person
 
 @method_decorator(csrf_exempt, name="dispatch")
 class PersonView(View):
-
     # 단건조회(pk가 있는경우), 목록조회
     def get(self, request, pk=None):
         if pk is not None:
