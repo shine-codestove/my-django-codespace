@@ -1,6 +1,6 @@
- GET http://localhost:8000/myapp/person/
+GET http://localhost:8000/myapp/person/
 
-POST http://localhost:8000/myapp/person/
+// POST http://localhost:8000/myapp/person/
 
 {
   "first_name": "김",
