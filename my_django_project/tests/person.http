@@ -1,0 +1,10 @@
+ GET http://localhost:8000/myapp/person/
+
+POST http://localhost:8000/myapp/person/
+
+{
+  "first_name": "김",
+  "last_name": "하호",
+  "age": 20,
+  "sex": "male"
+}
